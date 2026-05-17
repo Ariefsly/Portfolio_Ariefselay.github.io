@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomRide – Prototype UI/UX Marketplace Motor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ========================
+           HERO SECTION
+         ======================== */
+        .cr-hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 12rem 5% 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Orb dekorasi latar */
+        .cr-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(79,70,229,0.25) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .cr-hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%);
+            bottom: -80px;
+            left: -80px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cr-back-link {
+            position: absolute;
+            top: 9rem;
+            left: 5%;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .cr-back-link:hover { color: var(--main-color); }
+        .cr-back-link i { font-size: 2rem; }
+
+        .cr-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(79,70,229,0.15);
+            border: 1px solid rgba(79,70,229,0.4);
+            color: #a5b4fc;
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 0.6rem 1.6rem;
+            border-radius: 10rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+            position: relative;
+        }
+
+        .cr-hero h1 {
+            font-size: clamp(3.2rem, 6vw, 6rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.15;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            z-index: 1;
+            position: relative;
+        }
+        .cr-hero h1 span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cr-hero p {
+            font-size: 1.7rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 620px;
+            margin: 0 auto 4rem;
+            line-height: 1.8;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Tag info */
+        .cr-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            z-index: 1;
+            position: relative;
+        }
+        .cr-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.75);
+            font-size: 1.4rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 0.8rem;
+            backdrop-filter: blur(8px);
+        }
+        .cr-tag i { font-size: 1.7rem; color: #0ea5e9; }
+
+        /* Scroll indicator */
+        .cr-scroll-hint {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            color: rgba(255,255,255,0.35);
+            font-size: 1.2rem;
+            z-index: 1;
+            animation: bounce 2s infinite;
+        }
+        .cr-scroll-hint i { font-size: 2.4rem; }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ========================
+           MOCKUP SECTION
+        ======================== */
+        .cr-showcase {
+            background: #f8fafc;
+            padding: 8rem 5%;
+        }
+
+        .cr-section-label {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+        .cr-section-title {
+            text-align: center;
+            font-size: 3.6rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        .cr-section-title span { color: var(--main-color); }
+        .cr-section-sub {
+            text-align: center;
+            font-size: 1.6rem;
+            color: #64748b;
+            max-width: 500px;
+            margin: 0 auto 6rem;
+            line-height: 1.7;
+        }
+
+        /* Grid mockup */
+        .cr-mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .cr-mockup-card {
+            position: relative;
+            border-radius: 2.4rem;
+            overflow: hidden;
+            background: #fff;
+            box-shadow:
+                0 4px 6px rgba(0,0,0,0.04),
+                0 20px 60px rgba(79, 70, 229, 0.08),
+                0 0 0 1px rgba(0,0,0,0.04);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .cr-mockup-card:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow:
+                0 4px 6px rgba(0,0,0,0.04),
+                0 30px 80px rgba(79, 70, 229, 0.15),
+                0 0 0 1px rgba(79, 70, 229, 0.1);
+        }
+
+        /* Top bar dekoratif seperti browser */
+        .cr-mockup-bar {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            padding: 1.2rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .cr-mockup-dot {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+        }
+        .cr-mockup-dot:nth-child(1) { background: #ef4444; }
+        .cr-mockup-dot:nth-child(2) { background: #f59e0b; }
+        .cr-mockup-dot:nth-child(3) { background: #22c55e; }
+        .cr-mockup-title-bar {
+            flex: 1;
+            background: rgba(255,255,255,0.08);
+            border-radius: 0.6rem;
+            height: 2rem;
+            margin-left: 0.8rem;
+        }
+
+        .cr-mockup-img-wrap {
+            overflow: hidden;
+            background: #f1f5f9;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cr-mockup-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .cr-mockup-card:hover .cr-mockup-img-wrap img {
+            transform: scale(1.03);
+        }
+
+        /* Caption di bawah kartu */
+        .cr-mockup-caption {
+            padding: 2rem 2.4rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .cr-mockup-caption h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.4rem;
+        }
+        .cr-mockup-caption p {
+            font-size: 1.4rem;
+            color: #64748b;
+        }
+
+        /* Nomor indeks */
+        .cr-mockup-num {
+            position: absolute;
+            top: 6rem;
+            right: 2rem;
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        /* ========================
+           CTA BOTTOM
+        ======================== */
+        .cr-cta {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            padding: 8rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cr-cta::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+        .cr-cta h2 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .cr-cta p {
+            font-size: 1.7rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+        .cr-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--gradient-primary);
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 1.4rem 3.5rem;
+            border-radius: 10rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(79, 70, 229, 0.35);
+        }
+        .cr-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(79, 70, 229, 0.45);
+        }
+        .cr-cta-btn i { font-size: 2rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cr-mockup-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .cr-hero h1 { font-size: 3.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="header">
+        <a href="index.html" class="logo">A<span>sly.</span></a>
+        <nav class="navbar" style="display: block;">
+            <a href="index.html#projects" class="active">Back</a>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="cr-hero">
+        <a href="index.html#projects" class="cr-back-link">
+        </a>
+
+        <span class="cr-badge">
+            <i class='bx bx-palette'></i> UI/UX Design
+        </span>
+
+        <h1>Custom<span>Ride</span></h1>
+        <p>A mobile application prototype for trading motorcycles and accessories, focusing on an intuitive and modern user experience.</p>
+
+        <div class="cr-tags">
+            <span class="cr-tag"><i class='bx bxl-figma'></i> Figma</span>
+            <span class="cr-tag"><i class='bx bx-mobile-alt'></i> Mobile App</span>
+            <span class="cr-tag"><i class='bx bx-cart'></i> Marketplace</span>
+            <span class="cr-tag"><i class='bx bx-calendar'></i> 2024</span>
+        </div>
+
+        <div class="cr-scroll-hint">
+            <i class='bx bx-chevron-down'></i>
+            Scroll to see mockup
+        </div>
+    </section>
+
+    <!-- ===== MOCKUP SHOWCASE ===== -->
+    <section class="cr-showcase">
+        <p class="cr-section-label">Interface Design</p>
+        <h2 class="cr-section-title">Mockup <span>Design</span></h2>
+        <p class="cr-section-sub">Here is a glimpse of the interface design for the CustomRide application developed in Figma.</p>
+
+        <div class="cr-mockup-grid">
+
+            <!-- Kartu 1 -->
+            <div class="cr-mockup-card">
+                <div class="cr-mockup-bar">
+                    <span class="cr-mockup-dot"></span>
+                    <span class="cr-mockup-dot"></span>
+                    <span class="cr-mockup-dot"></span>
+                    <div class="cr-mockup-title-bar"></div>
+                </div>
+                <div class="cr-mockup-img-wrap">
+                    <img src="Image/Mockup  CustomRide.png" alt="Mockup CustomRide Screen 1">
+                </div>
+                <div class="cr-mockup-caption">
+                    <h3>Main Screen</h3>
+                    <p>Homepage & motorcycle marketplace exploration</p>
+                </div>
+                <div class="cr-mockup-num">01</div>
+            </div>
+
+            <!-- Kartu 2 -->
+            <div class="cr-mockup-card">
+                <div class="cr-mockup-bar">
+                    <span class="cr-mockup-dot"></span>
+                    <span class="cr-mockup-dot"></span>
+                    <span class="cr-mockup-dot"></span>
+                    <div class="cr-mockup-title-bar"></div>
+                </div>
+                <div class="cr-mockup-img-wrap">
+                    <img src="Image/Mockup  CustomRide2.png" alt="Mockup CustomRide Screen 2">
+                </div>
+                <div class="cr-mockup-caption">
+                    <h3>Detail Screen</h3>
+                    <p>Logo page & motorcycle purchase</p>
+                </div>
+                <div class="cr-mockup-num">02</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cr-cta">
+        <h2>Interested in this project?</h2>
+        <p>Let's collaborate and bring your digital ideas to life.</p>
+        <a href="index.html#contact" class="cr-cta-btn">
+            <i class='bx bx-envelope'></i> Contact Me
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Arief Selay | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
