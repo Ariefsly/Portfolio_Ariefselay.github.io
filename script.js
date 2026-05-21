@@ -33,7 +33,7 @@ window.onscroll = () => {
 
 // Typed js animation
 const typed = new Typed('.multiple-text', {
-    strings: ['UI/UX Designer', 'Frontend Engineer'],
+    strings: ['UI/UX Designer', 'Frontend Developer'],
     typeSpeed: 80,
     backSpeed: 80,
     backDelay: 1000,
