@@ -355,6 +355,175 @@
         @media (max-width: 768px) {
             .cr-mockup-grid { grid-template-columns: 1fr; gap: 3rem; }
             .cr-hero h1 { font-size: 3.2rem; }
+            .ux-case-info-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========================
+           UX CASE STUDY STYLES
+        ======================== */
+        .ux-case-container {
+            font-family: inherit;
+            color: inherit;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .ux-case-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background-color: rgba(15, 23, 42, 0.03);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .ux-case-info-item {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .ux-case-info-label {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .ux-case-info-value {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .ux-case-section {
+            margin-bottom: 40px;
+        }
+
+        .ux-case-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(15, 23, 42, 0.05);
+            padding-bottom: 12px;
+            text-align: left;
+        }
+
+        .ux-case-text {
+            font-size: 1.6rem;
+            color: #475569;
+            margin-bottom: 16px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .ux-case-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 16px;
+            color: #475569;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .ux-case-list li {
+            margin-bottom: 10px;
+        }
+        .ux-case-list li strong {
+            color: #1e293b;
+        }
+
+        .ux-case-image-wrapper {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 32px 0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+            background: #f8fafc;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .ux-case-image-wrapper img {
+            max-width: 80%;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            .ux-case-image-wrapper img {
+                max-width: 60%;
+            }
+        }
+
+        .ux-case-figma-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            margin-top: 24px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: #1e293b;
+        }
+
+        .ux-case-figma-header {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ux-case-figma-header .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .ux-case-figma-header .title-bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            height: 24px;
+            margin-left: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.05em;
+        }
+
+        .ux-case-figma-wrapper {
+            position: relative;
+            padding-bottom: 60%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .ux-case-figma-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -393,50 +562,85 @@
         </div>
     </section>
 
-    <!-- ===== MOCKUP SHOWCASE ===== -->
+    <!-- ===== UX CASE STUDY ===== -->
     <section class="cr-showcase">
-        <p class="cr-section-label">Interface Design</p>
-        <h2 class="cr-section-title">Mockup <span>Design</span></h2>
-        <p class="cr-section-sub">Here is a glimpse of the interface design for the CustomRide application developed in Figma.</p>
-
-        <div class="cr-mockup-grid">
-
-            <!-- Kartu 1 -->
-            <div class="cr-mockup-card">
-                <div class="cr-mockup-bar">
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <div class="cr-mockup-title-bar"></div>
+        <p class="cr-section-label">Case Study</p>
+        <h2 class="cr-section-title">UX <span>Research & Design</span></h2>
+        
+        <div class="ux-case-container">
+            <!-- 1. Info Summary -->
+            <div class="ux-case-info-grid">
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Role</span>
+                    <span class="ux-case-info-value">UI Designer (Group Project)</span>
                 </div>
-                <div class="cr-mockup-img-wrap">
-                    <img src="Image/Mockup  CustomRide.png" alt="Mockup CustomRide Screen 1">
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Duration</span>
+                    <span class="ux-case-info-value">May - Jul 2024</span>
                 </div>
-                <div class="cr-mockup-caption">
-                    <h3>Main Screen</h3>
-                    <p>Homepage & motorcycle marketplace exploration</p>
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Tools</span>
+                    <span class="ux-case-info-value">Figma</span>
                 </div>
-                <div class="cr-mockup-num">01</div>
             </div>
 
-            <!-- Kartu 2 -->
-            <div class="cr-mockup-card">
-                <div class="cr-mockup-bar">
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <div class="cr-mockup-title-bar"></div>
-                </div>
-                <div class="cr-mockup-img-wrap">
-                    <img src="Image/Mockup  CustomRide2.png" alt="Mockup CustomRide Screen 2">
-                </div>
-                <div class="cr-mockup-caption">
-                    <h3>Detail Screen</h3>
-                    <p>Logo page & motorcycle purchase</p>
-                </div>
-                <div class="cr-mockup-num">02</div>
+            <!-- 2. Project Background -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Project Background</h3>
+                <p class="ux-case-text">
+                    The "CustomRide" application was a group project during my university studies. The case study we chose was based on the premise that the buying and selling process of used and custom-modified motorcycles often lacks transparency. The motorcycle community needs a centralized platform that acts not only as a marketplace but also accommodates detailed specifications regarding vehicle customization.
+                </p>
             </div>
 
+            <!-- 3. Requirements Analysis -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Requirements Analysis</h3>
+                <p class="ux-case-text">Through group discussions and desk research, we formulated several hypotheses regarding the primary needs of our target users:</p>
+                <ul class="ux-case-list">
+                    <li><strong>Trust & Security:</strong> Users tend to be anxious when purchasing expensive automotive goods without a clear seller verification or rating system.</li>
+                    <li><strong>Detailed Modification Specs:</strong> Buyers of custom motorcycles require comprehensive breakdowns of modified parts, rather than brief descriptions found on standard motorcycles.</li>
+                    <li><strong>Visual Exploration:</strong> Automotive enthusiasts heavily rely on high-resolution photos to evaluate the fine details of vehicle modifications.</li>
+                </ul>
+            </div>
+
+            <!-- 4. Design Solution -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Design Solution & UI Execution</h3>
+                <p class="ux-case-text">
+                    Within this group, I took full responsibility for executing the user interface (UI) design. I designed the layout of "CustomRide" with a strong emphasis on <strong>Visual Exploration</strong> and <strong>Vehicle Information Readability</strong>. The layout was structured to display large motorcycle images, combined with well-organized, easily readable customization specification tags.
+                </p>
+                
+                <div class="ux-case-image-wrapper">
+                    <img src="Image/Mockup  CustomRide.png" alt="CustomRide Homepage" loading="lazy" />
+                </div>
+                <div class="ux-case-image-wrapper">
+                    <img src="Image/Mockup  CustomRide2.png" alt="CustomRide Detail Page" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- 5. Figma Embed Container -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Interactive Prototype</h3>
+                <p class="ux-case-text">
+                    Please explore the high-fidelity prototype of CustomRide directly through the Figma frame below:
+                </p>
+                
+                <div class="ux-case-figma-container">
+                    <div class="ux-case-figma-header">
+                        <span class="dot" style="background:#ef4444"></span>
+                        <span class="dot" style="background:#f59e0b"></span>
+                        <span class="dot" style="background:#22c55e"></span>
+                        <div class="title-bar">Interactive Prototype</div>
+                    </div>
+                    <div class="ux-case-figma-wrapper">
+                        <!-- Replace the URL in the src attribute with your actual Figma embed link -->
+                        <iframe 
+                            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTEMPATKAN_LINK_PROTOTYPE_CUSTOMRIDE_DI_SINI" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
