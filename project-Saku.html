@@ -355,6 +355,175 @@
         @media (max-width: 768px) {
             .cr-mockup-grid { grid-template-columns: 1fr; gap: 3rem; }
             .cr-hero h1 { font-size: 3.2rem; }
+            .ux-case-info-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ========================
+           UX CASE STUDY STYLES
+        ======================== */
+        .ux-case-container {
+            font-family: inherit;
+            color: inherit;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: left;
+        }
+
+        .ux-case-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background-color: rgba(15, 23, 42, 0.03);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .ux-case-info-item {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .ux-case-info-label {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .ux-case-info-value {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .ux-case-section {
+            margin-bottom: 40px;
+        }
+
+        .ux-case-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(15, 23, 42, 0.05);
+            padding-bottom: 12px;
+            text-align: left;
+        }
+
+        .ux-case-text {
+            font-size: 1.6rem;
+            color: #475569;
+            margin-bottom: 16px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .ux-case-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 16px;
+            color: #475569;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .ux-case-list li {
+            margin-bottom: 10px;
+        }
+        .ux-case-list li strong {
+            color: #1e293b;
+        }
+
+        .ux-case-image-wrapper {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 32px 0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+            background: #f8fafc;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .ux-case-image-wrapper img {
+            max-width: 80%;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            .ux-case-image-wrapper img {
+                max-width: 60%;
+            }
+        }
+
+        .ux-case-figma-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            margin-top: 24px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: #1e293b;
+        }
+
+        .ux-case-figma-header {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ux-case-figma-header .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .ux-case-figma-header .title-bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            height: 24px;
+            margin-left: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.05em;
+        }
+
+        .ux-case-figma-wrapper {
+            position: relative;
+            padding-bottom: 60%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .ux-case-figma-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -392,50 +561,85 @@
         </div>
     </section>
 
-    <!-- ===== MOCKUP SHOWCASE ===== -->
+    <!-- ===== UX CASE STUDY ===== -->
     <section class="cr-showcase">
-        <p class="cr-section-label">Interface Design</p>
-        <h2 class="cr-section-title">Mockup <span>Design</span></h2>
-        <p class="cr-section-sub">Here is a glimpse of the interface design for the personal finance management application developed in Figma.</p>
-
-        <div class="cr-mockup-grid">
-
-            <!-- Kartu 1 -->
-            <div class="cr-mockup-card">
-                <div class="cr-mockup-bar">
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <div class="cr-mockup-title-bar"></div>
+        <p class="cr-section-label">Case Study</p>
+        <h2 class="cr-section-title">UX <span>Research & Design</span></h2>
+        
+        <div class="ux-case-container">
+            <!-- 1. Ringkasan Info -->
+            <div class="ux-case-info-grid">
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Role</span>
+                    <span class="ux-case-info-value">UI/UX Designer & Researcher</span>
                 </div>
-                <div class="cr-mockup-img-wrap">
-                    <img src="Image/APK SAKU.png" alt="Mockup Saku Screen 1">
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Duration</span>
+                    <span class="ux-case-info-value">Feb - Apr 2026</span>
                 </div>
-                <div class="cr-mockup-caption">
-                    <h3>Main Screen</h3>
-                    <p>Logo Page, Dashboard & Financial Recording</p>
+                <div class="ux-case-info-item">
+                    <span class="ux-case-info-label">Tools</span>
+                    <span class="ux-case-info-value">Figma</span>
                 </div>
-                <div class="cr-mockup-num">01</div>
             </div>
 
-            <!-- Kartu 2 -->
-            <div class="cr-mockup-card">
-                <div class="cr-mockup-bar">
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <span class="cr-mockup-dot"></span>
-                    <div class="cr-mockup-title-bar"></div>
-                </div>
-                <div class="cr-mockup-img-wrap">
-                    <img src="Image/APK SAKU 2.png" alt="Mockup Saku Screen 2">
-                </div>
-                <div class="cr-mockup-caption">
-                    <h3>Detail Screen</h3>
-                    <p>History Transactions & Financial Reports</p>
-                </div>
-                <div class="cr-mockup-num">02</div>
+            <!-- 2. Latar Belakang Masalah -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Problem Background</h3>
+                <p class="ux-case-text">
+                    Recording daily expenses is often a tedious task for many college students. Manual tracking feels overly complicated and time-consuming, leading to procrastination. As a result, expenses are poorly managed, culminating in financial struggles at the end of the month.
+                </p>
             </div>
 
+            <!-- 3. Temuan Riset (User Insights) -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Research Findings</h3>
+                <p class="ux-case-text">From our research and interviews with target users, we discovered several key insights:</p>
+                <ul class="ux-case-list">
+                    <li><strong>Fast Flow:</strong> Users desire an instant way to record expenses without going through multiple steps (<em>clicks</em>).</li>
+                    <li><strong>Simple Visualization:</strong> Simple charts that quickly indicate financial status are highly preferred over complex numerical reports.</li>
+                    <li><strong>Jargon-Free:</strong> Advanced financial terminologies make users feel overwhelmed.</li>
+                </ul>
+            </div>
+
+            <!-- 4. Solusi Desain -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Design Solution</h3>
+                <p class="ux-case-text">
+                    Based on these findings, I designed the "Saku App" interface focusing on a <strong>Minimalist Dashboard</strong> and a <strong>3-Click Recording Flow</strong>. Users simply need to input the amount, select an intuitive category icon, and save.
+                </p>
+                
+                <div class="ux-case-image-wrapper">
+                    <img src="Image/APK SAKU.png" alt="Tampilan Dasbor Saku App" loading="lazy" />
+                </div>
+                <div class="ux-case-image-wrapper">
+                    <img src="Image/APK SAKU 2.png" alt="Tampilan Detail Transaksi Saku App" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- 5. Figma Embed Container -->
+            <div class="ux-case-section">
+                <h3 class="ux-case-title">Interactive Prototype</h3>
+                <p class="ux-case-text">
+                    Please explore the high-fidelity prototype of the Saku App directly through the Figma frame below:
+                </p>
+                
+                <div class="ux-case-figma-container">
+                    <div class="ux-case-figma-header">
+                        <span class="dot" style="background:#ef4444"></span>
+                        <span class="dot" style="background:#f59e0b"></span>
+                        <span class="dot" style="background:#22c55e"></span>
+                        <div class="title-bar">Interactive Prototype</div>
+                    </div>
+                    <div class="ux-case-figma-wrapper">
+                        <!-- Replace the URL in the src attribute with your actual Figma embed link -->
+                        <iframe 
+                            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTEMPATKAN_LINK_PROTOTYPE_SAKU_DI_SINI" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
