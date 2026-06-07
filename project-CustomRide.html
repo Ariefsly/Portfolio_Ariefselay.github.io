@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CustomRide – Prototype UI/UX Marketplace Motor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -32,18 +34,19 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(79,70,229,0.25) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, transparent 70%);
             top: -100px;
             right: -100px;
             border-radius: 50%;
             pointer-events: none;
         }
+
         .cr-hero::after {
             content: '';
             position: absolute;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
             bottom: -80px;
             left: -80px;
             border-radius: 50%;
@@ -58,19 +61,25 @@
             align-items: center;
             gap: 0.6rem;
             font-size: 1.5rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             transition: color 0.3s;
         }
-        .cr-back-link:hover { color: var(--main-color); }
-        .cr-back-link i { font-size: 2rem; }
+
+        .cr-back-link:hover {
+            color: var(--main-color);
+        }
+
+        .cr-back-link i {
+            font-size: 2rem;
+        }
 
         .cr-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: rgba(79,70,229,0.15);
-            border: 1px solid rgba(79,70,229,0.4);
+            background: rgba(79, 70, 229, 0.15);
+            border: 1px solid rgba(79, 70, 229, 0.4);
             color: #a5b4fc;
             font-size: 1.3rem;
             font-weight: 600;
@@ -94,6 +103,7 @@
             z-index: 1;
             position: relative;
         }
+
         .cr-hero h1 span {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -102,7 +112,7 @@
 
         .cr-hero p {
             font-size: 1.7rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             max-width: 620px;
             margin: 0 auto 4rem;
             line-height: 1.8;
@@ -119,19 +129,24 @@
             z-index: 1;
             position: relative;
         }
+
         .cr-tag {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.75);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.75);
             font-size: 1.4rem;
             padding: 0.8rem 1.8rem;
             border-radius: 0.8rem;
             backdrop-filter: blur(8px);
         }
-        .cr-tag i { font-size: 1.7rem; color: #0ea5e9; }
+
+        .cr-tag i {
+            font-size: 1.7rem;
+            color: #0ea5e9;
+        }
 
         /* Scroll indicator */
         .cr-scroll-hint {
@@ -143,15 +158,26 @@
             flex-direction: column;
             align-items: center;
             gap: 0.6rem;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255, 255, 255, 0.35);
             font-size: 1.2rem;
             z-index: 1;
             animation: bounce 2s infinite;
         }
-        .cr-scroll-hint i { font-size: 2.4rem; }
+
+        .cr-scroll-hint i {
+            font-size: 2.4rem;
+        }
+
         @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(8px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
         }
 
         /* ========================
@@ -171,6 +197,7 @@
             color: var(--main-color);
             margin-bottom: 1rem;
         }
+
         .cr-section-title {
             text-align: center;
             font-size: 3.6rem;
@@ -178,7 +205,11 @@
             color: #1e293b;
             margin-bottom: 1rem;
         }
-        .cr-section-title span { color: var(--main-color); }
+
+        .cr-section-title span {
+            color: var(--main-color);
+        }
+
         .cr-section-sub {
             text-align: center;
             font-size: 1.6rem;
@@ -203,9 +234,9 @@
             overflow: hidden;
             background: #fff;
             box-shadow:
-                0 4px 6px rgba(0,0,0,0.04),
+                0 4px 6px rgba(0, 0, 0, 0.04),
                 0 20px 60px rgba(79, 70, 229, 0.08),
-                0 0 0 1px rgba(0,0,0,0.04);
+                0 0 0 1px rgba(0, 0, 0, 0.04);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             cursor: pointer;
         }
@@ -213,7 +244,7 @@
         .cr-mockup-card:hover {
             transform: translateY(-10px) scale(1.01);
             box-shadow:
-                0 4px 6px rgba(0,0,0,0.04),
+                0 4px 6px rgba(0, 0, 0, 0.04),
                 0 30px 80px rgba(79, 70, 229, 0.15),
                 0 0 0 1px rgba(79, 70, 229, 0.1);
         }
@@ -226,17 +257,28 @@
             align-items: center;
             gap: 0.7rem;
         }
+
         .cr-mockup-dot {
             width: 1.2rem;
             height: 1.2rem;
             border-radius: 50%;
         }
-        .cr-mockup-dot:nth-child(1) { background: #ef4444; }
-        .cr-mockup-dot:nth-child(2) { background: #f59e0b; }
-        .cr-mockup-dot:nth-child(3) { background: #22c55e; }
+
+        .cr-mockup-dot:nth-child(1) {
+            background: #ef4444;
+        }
+
+        .cr-mockup-dot:nth-child(2) {
+            background: #f59e0b;
+        }
+
+        .cr-mockup-dot:nth-child(3) {
+            background: #22c55e;
+        }
+
         .cr-mockup-title-bar {
             flex: 1;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 0.6rem;
             height: 2rem;
             margin-left: 0.8rem;
@@ -250,6 +292,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .cr-mockup-img-wrap img {
             width: 100%;
             height: 100%;
@@ -258,6 +301,7 @@
             display: block;
             transition: transform 0.6s ease;
         }
+
         .cr-mockup-card:hover .cr-mockup-img-wrap img {
             transform: scale(1.03);
         }
@@ -267,12 +311,14 @@
             padding: 2rem 2.4rem;
             border-top: 1px solid #f1f5f9;
         }
+
         .cr-mockup-caption h3 {
             font-size: 1.8rem;
             font-weight: 700;
             color: #1e293b;
             margin-bottom: 0.4rem;
         }
+
         .cr-mockup-caption p {
             font-size: 1.4rem;
             color: #64748b;
@@ -306,17 +352,19 @@
             position: relative;
             overflow: hidden;
         }
+
         .cr-cta::before {
             content: '';
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
             top: -200px;
             left: 50%;
             transform: translateX(-50%);
             border-radius: 50%;
         }
+
         .cr-cta h2 {
             font-size: 3.6rem;
             font-weight: 800;
@@ -324,12 +372,14 @@
             margin-bottom: 1.5rem;
             position: relative;
         }
+
         .cr-cta p {
             font-size: 1.7rem;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             margin-bottom: 3.5rem;
             position: relative;
         }
+
         .cr-cta-btn {
             display: inline-flex;
             align-items: center;
@@ -345,17 +395,30 @@
             position: relative;
             box-shadow: 0 8px 30px rgba(79, 70, 229, 0.35);
         }
+
         .cr-cta-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 16px 40px rgba(79, 70, 229, 0.45);
         }
-        .cr-cta-btn i { font-size: 2rem; }
+
+        .cr-cta-btn i {
+            font-size: 2rem;
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .cr-mockup-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .cr-hero h1 { font-size: 3.2rem; }
-            .ux-case-info-grid { grid-template-columns: 1fr; }
+            .cr-mockup-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .cr-hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .ux-case-info-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ========================
@@ -439,6 +502,7 @@
         .ux-case-list li {
             margin-bottom: 10px;
         }
+
         .ux-case-list li strong {
             color: #1e293b;
         }
@@ -527,6 +591,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -547,7 +612,8 @@
         </span>
 
         <h1>Custom<span>Ride</span></h1>
-        <p>A mobile application prototype for trading motorcycles and accessories, focusing on an intuitive and modern user experience.</p>
+        <p>A mobile application prototype for trading motorcycles and accessories, focusing on an intuitive and modern
+            user experience.</p>
 
         <div class="cr-tags">
             <span class="cr-tag"><i class='bx bxl-figma'></i> Figma</span>
@@ -566,7 +632,7 @@
     <section class="cr-showcase">
         <p class="cr-section-label">Case Study</p>
         <h2 class="cr-section-title">UX <span>Research & Design</span></h2>
-        
+
         <div class="ux-case-container">
             <!-- 1. Info Summary -->
             <div class="ux-case-info-grid">
@@ -576,7 +642,7 @@
                 </div>
                 <div class="ux-case-info-item">
                     <span class="ux-case-info-label">Duration</span>
-                    <span class="ux-case-info-value">May - Jul 2024</span>
+                    <span class="ux-case-info-value">June 2025</span>
                 </div>
                 <div class="ux-case-info-item">
                     <span class="ux-case-info-label">Tools</span>
@@ -588,18 +654,26 @@
             <div class="ux-case-section">
                 <h3 class="ux-case-title">Project Background</h3>
                 <p class="ux-case-text">
-                    The "CustomRide" application was a group project during my university studies. The case study we chose was based on the premise that the buying and selling process of used and custom-modified motorcycles often lacks transparency. The motorcycle community needs a centralized platform that acts not only as a marketplace but also accommodates detailed specifications regarding vehicle customization.
+                    The "CustomRide" application was a group project during my university studies. The case study we
+                    chose was based on the premise that the buying and selling process of used and custom-modified
+                    motorcycles often lacks transparency. The motorcycle community needs a centralized platform that
+                    acts not only as a marketplace but also accommodates detailed specifications regarding vehicle
+                    customization.
                 </p>
             </div>
 
             <!-- 3. Requirements Analysis -->
             <div class="ux-case-section">
                 <h3 class="ux-case-title">Requirements Analysis</h3>
-                <p class="ux-case-text">Through group discussions and desk research, we formulated several hypotheses regarding the primary needs of our target users:</p>
+                <p class="ux-case-text">Through group discussions and desk research, we formulated several hypotheses
+                    regarding the primary needs of our target users:</p>
                 <ul class="ux-case-list">
-                    <li><strong>Trust & Security:</strong> Users tend to be anxious when purchasing expensive automotive goods without a clear seller verification or rating system.</li>
-                    <li><strong>Detailed Modification Specs:</strong> Buyers of custom motorcycles require comprehensive breakdowns of modified parts, rather than brief descriptions found on standard motorcycles.</li>
-                    <li><strong>Visual Exploration:</strong> Automotive enthusiasts heavily rely on high-resolution photos to evaluate the fine details of vehicle modifications.</li>
+                    <li><strong>Trust & Security:</strong> Users tend to be anxious when purchasing expensive automotive
+                        goods without a clear seller verification or rating system.</li>
+                    <li><strong>Detailed Modification Specs:</strong> Buyers of custom motorcycles require comprehensive
+                        breakdowns of modified parts, rather than brief descriptions found on standard motorcycles.</li>
+                    <li><strong>Visual Exploration:</strong> Automotive enthusiasts heavily rely on high-resolution
+                        photos to evaluate the fine details of vehicle modifications.</li>
                 </ul>
             </div>
 
@@ -607,9 +681,12 @@
             <div class="ux-case-section">
                 <h3 class="ux-case-title">Design Solution & UI Execution</h3>
                 <p class="ux-case-text">
-                    Within this group, I took full responsibility for executing the user interface (UI) design. I designed the layout of "CustomRide" with a strong emphasis on <strong>Visual Exploration</strong> and <strong>Vehicle Information Readability</strong>. The layout was structured to display large motorcycle images, combined with well-organized, easily readable customization specification tags.
+                    Within this group, I took full responsibility for executing the user interface (UI) design. I
+                    designed the layout of "CustomRide" with a strong emphasis on <strong>Visual Exploration</strong>
+                    and <strong>Vehicle Information Readability</strong>. The layout was structured to display large
+                    motorcycle images, combined with well-organized, easily readable customization specification tags.
                 </p>
-                
+
                 <div class="ux-case-image-wrapper">
                     <img src="Image/Mockup  CustomRide.png" alt="CustomRide Homepage" loading="lazy" />
                 </div>
@@ -624,7 +701,7 @@
                 <p class="ux-case-text">
                     Please explore the high-fidelity prototype of CustomRide directly through the Figma frame below:
                 </p>
-                
+
                 <div class="ux-case-figma-container">
                     <div class="ux-case-figma-header">
                         <span class="dot" style="background:#ef4444"></span>
@@ -634,8 +711,8 @@
                     </div>
                     <div class="ux-case-figma-wrapper">
                         <!-- Replace the URL in the src attribute with your actual Figma embed link -->
-                        <iframe 
-                            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTEMPATKAN_LINK_PROTOTYPE_CUSTOMRIDE_DI_SINI" 
+                        <iframe
+                            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FM7t0KK3WTsmP7MEj6LLR0E%2Fbelajar-figma-1%3Fnode-id%3D250-518%26viewport%3D28%252C414%252C0.2%26t%3DZx0swSAKm1XTti2z-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D34%253A8%26page-id%3D0%253A1"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -665,4 +742,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
