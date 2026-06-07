@@ -167,21 +167,21 @@ const nextBtn = document.getElementById('next-project');
 
 if (slider && prevBtn && nextBtn) {
     const scrollAmount = 350; // Width of card + gap (320px + 30px = 350px)
-    
+
     prevBtn.addEventListener('click', () => {
         slider.scrollBy({
             left: -scrollAmount,
             behavior: 'smooth'
         });
     });
-    
+
     nextBtn.addEventListener('click', () => {
         slider.scrollBy({
             left: scrollAmount,
             behavior: 'smooth'
         });
     });
-    
+
     // Hide/Show arrow buttons based on scroll position for premium feel
     const toggleButtons = () => {
         const isScrollable = slider.scrollWidth > slider.clientWidth;
@@ -192,7 +192,7 @@ if (slider && prevBtn && nextBtn) {
             nextBtn.style.pointerEvents = 'none';
             return;
         }
-        
+
         if (slider.scrollLeft > 10) {
             prevBtn.style.opacity = '1';
             prevBtn.style.pointerEvents = 'auto';
@@ -200,7 +200,7 @@ if (slider && prevBtn && nextBtn) {
             prevBtn.style.opacity = '0';
             prevBtn.style.pointerEvents = 'none';
         }
-        
+
         const isAtEnd = Math.ceil(slider.scrollLeft + slider.clientWidth) >= slider.scrollWidth - 10;
         if (isAtEnd) {
             nextBtn.style.opacity = '0';
@@ -210,10 +210,10 @@ if (slider && prevBtn && nextBtn) {
             nextBtn.style.pointerEvents = 'auto';
         }
     };
-    
+
     slider.addEventListener('scroll', toggleButtons);
     window.addEventListener('resize', toggleButtons);
-    
+
     // Initial check (using setTimeout to ensure DOM is fully laid out)
     setTimeout(toggleButtons, 200);
 }
