@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Boxicons for clean modern icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <header class="header">
@@ -34,11 +37,13 @@
             <h3>Hello, I'm</h3>
             <h1>Arief Selay</h1>
             <h3>A <span class="multiple-text"></span></h3>
-            <p>I build elegant, modern, and interactive digital experiences. Focused on clean interface design and functionality.</p>
+            <p>I build elegant, modern, and interactive digital experiences. Focused on clean interface design and
+                functionality.</p>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/arief-selay/"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Ariefsly"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/arif.sly?igsh=dnpnMjRzdzY3dnM3&utm_source=qr"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.instagram.com/arif.sly?igsh=dnpnMjRzdzY3dnM3&utm_source=qr"><i
+                        class='bx bxl-instagram'></i></a>
             </div>
             <a href="#projects" class="btn">View My Work</a>
         </div>
@@ -54,9 +59,7 @@
         <div class="about-content reveal from-bottom">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Turning Ideas Into Digital Reality</h3>
-            <p>A recent Computer Science graduate with skills in UI/UX Design and Frontend Developer. 
-                I also enjoy working as an Editor, Videographer, and Photographer. I have experience building simple websites using VS Code and Antigravity, gained from my internship experience. 
-                I strongly believe in the power of teamwork and look forward to gaining more new experiences in the future.</p>
+            <p>A recent Computer Science graduate specializing in UI/UX Design and frontend web development. I have practical internship experience in building digital interfaces, along with additional expertise in multimedia (photography & video editing). I am accustomed to leading collaborative teams and am highly focused on creating user-centric visual product solutions.</p>
             <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
         </div>
     </section>
@@ -67,37 +70,87 @@
         <div class="skills-marquee">
             <!-- Set pertama -->
             <div class="marquee-content">
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
-                
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
-                
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
+                <!-- Main visible set (readable by screen readers) -->
+                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
+
+                <!-- Duplicated sets for infinite scroll (hidden from screen readers) -->
+                <div class="skill-item" aria-hidden="true"><img src="Image/html.png" alt="" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/css.png" alt="" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/js.png" alt="" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/figma.png" alt="" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
+
+                <div class="skill-item" aria-hidden="true"><img src="Image/html.png" alt="" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/css.png" alt="" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/js.png" alt="" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item" aria-hidden="true"><img src="Image/figma.png" alt="" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
             </div>
             <!-- Set kedua (duplikat) untuk efek infinite scroll tanpa jeda -->
             <div class="marquee-content" aria-hidden="true">
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
-                
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
-                
-                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon"><h3>HTML5</h3></div>
-                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon"><h3>CSS3</h3></div>
-                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3></div>
-                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon"><h3>Figma</h3></div>
+                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
+
+                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
+
+                <div class="skill-item"><img src="Image/html.png" alt="HTML5" class="skill-icon">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item"><img src="Image/css.png" alt="CSS3" class="skill-icon">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item"><img src="Image/js.png" alt="JavaScript" class="skill-icon">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item"><img src="Image/figma.png" alt="Figma" class="skill-icon">
+                    <h3>Figma</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -106,73 +159,88 @@
     <section class="experience" id="experience">
         <h2 class="heading reveal fade-only">My <span>Experience</span></h2>
         <div class="experience-container">
+            <!-- 1. Ketua KKN (Aug 2025) -->
             <div class="experience-box reveal from-left">
                 <div class="experience-content">
-                    <h3>Freelance Photographer</h3>
-                    <h4>March 2022</h4>
-                    <p>Served as a photographer for the Atalian Global Services team at the Mandiri ITB Ultra Marathon event.</p>
-                </div>
-            </div>
-            <div class="experience-box reveal from-right reveal-delay-1">
-                <div class="experience-content">
-                    <h3>Logistics Committee for Business Innovation Seminar and Entrepreneurship Competition</h3>
-                    <h4>February - March 2024</h4>
-                     <ul>
-                        <li>Prepared logistics for seminar and competition events.</li>
-                        <li>Coordinated with the event division regarding decoration and room arrangement.</li>
-                        <li>Collaborated with the public relations division in building preparation and event regulation processing.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="experience-box reveal from-left reveal-delay-1">
-                <div class="experience-content">
-                    <h3>National Folklore Festival UI Choir Competition</h3>
-                    <h4>March 2024</h4>
-                    <p>Won a gold medal in the 18th National Folklore Festival choir competition for the university and general category, organized by BEM FEB Universitas Indonesia.</p>
-                </div>
-            </div>
-            <div class="experience-box reveal from-right reveal-delay-1">
-                <div class="experience-content">
-                    <h3>Public Relations Coordinator Committee for Faculty Grand Deliberation</h3>
-                    <h4>May 2024</h4>
-                    <p>Responsible for coordinating communication, publication, and information dissemination during the Faculty Grand Deliberation event.</p>
-                </div>
-            </div>
-             <div class="experience-box reveal from-left reveal-delay-1">
-                <div class="experience-content">
-                    <h3>Internship at YAKES TELKOM BANDUNG</h3>
-                    <h4>July – August 2024</h4>
+                    <h3>Head of Student Community Service (KKN) - Joint Program of Computer Science & Agriculture Faculties</h3>
+                    <h4>July - August 2025</h4>
                     <ul>
-                        <li>Legal Unit: Assisted in recapping data and managing regulatory documents within the legal unit.</li>
-                        <li>At the CAM (Customer Account Management) Unit, assisted in developing the website interface as a Frontend Developer for YAM (Yakes Account Manager)..</li>
+                        <li>Led an interdisciplinary team of 8 students in designing and executing 11 community service programs within a 1-month period.</li>
+                        <li>Served as the primary representative in negotiating and collaborating with village officials and local agencies regarding program permits.</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- 2. Anggota DPM (Jul 2025) -->
+            <div class="experience-box reveal from-right reveal-delay-1">
+                <div class="experience-content">
+                    <h3>Member of the Student Representative Council (DPM) - Commission II for Student Aspirations</h3>
+                    <h4>May 2024 - July 2025</h4>
+                    <ul>
+                        <li>Acted as the main mediator in conveying student complaints and suggestions to the dean's office to improve academic quality and campus facilities.</li>
+                        <li>Advocated for students facing administrative difficulties, successfully securing financial and administrative relief letters.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Lomba Gold Medal (Feb 2025) -->
             <div class="experience-box reveal from-left reveal-delay-1">
                 <div class="experience-content">
                     <h3>National Folklore Festival UI Choir Competition</h3>
                     <h4>February 2025</h4>
-                    <p>Won a gold medal in the 19th National Folklore Festival choir competition for the university and general category, organized by BEM FEB Universitas Indonesia.</p>
+                    <p>Won a Gold Medal in the 19th National Folklore Festival UI (National Level).</p>
                 </div>
             </div>
+
+            <!-- 4. Magang YAKES TELKOM (Aug 2024) -->
             <div class="experience-box reveal from-right reveal-delay-1">
                 <div class="experience-content">
-                    <h3>Member of DPM (Student Representative Council) Commission II for Faculty Aspirations</h3>
-                    <h4>June 2024 - July 2025</h4>
+                    <h3>Internship at YAKES TELKOM BANDUNG</h3>
+                    <h4>July - August 2024</h4>
                     <ul>
-                        <li>Served as the main mediator in conveying student complaints and suggestions to the dean's office to improve the quality of facilities and academics.</li>
-                        <li>Advocated for students facing administrative difficulties, successfully securing letters of relief regarding student administration.</li>
+                        <li>CAM Unit (Front-end Developer): Developed the user interface for the YAM (Yakes Account Manager) website using VSCode, HTML, and CSS to enhance system functionality.</li>
+                        <li>Legal Unit: Managed and accurately entered data regarding the company's internal regulatory documents.</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- 5. Panitia Humas Mubes (May 2024) -->
             <div class="experience-box reveal from-left reveal-delay-1">
                 <div class="experience-content">
-                    <h3>Head of KKN (Student Study Service) Collaboration between Faculty of Computer Science and Faculty of Agriculture</h3>
-                    <h4>July - August 2025</h4>
+                    <h3>Public Relations Coordinator for the Faculty Grand Deliberation (Mubes)</h3>
+                    <h4>May 2024</h4>
+                    <p>Responsible for coordinating communication, publications, and information dissemination during the Faculty Grand Deliberation event.</p>
+                </div>
+            </div>
+
+            <!-- 6. Lomba Silver Medal (Mar 2024) -->
+            <div class="experience-box reveal from-right reveal-delay-1">
+                <div class="experience-content">
+                    <h3>National Folklore Festival UI Choir Competition</h3>
+                    <h4>March 2024</h4>
+                    <p>Won a Silver Medal in the 18th National Folklore Festival UI (National Level).</p>
+                </div>
+            </div>
+
+            <!-- 7. Panitia Logistik (Mar 2024) -->
+            <div class="experience-box reveal from-left reveal-delay-1">
+                <div class="experience-content">
+                    <h3>Logistics Committee for Business Innovation Seminar and Entrepreneurship Competition</h3>
+                    <h4>February - March 2024</h4>
                     <ul>
-                        <li>Led and coordinated a team of 8 students in designing and executing 11 work programs over 1 month.</li>
-                        <li>Acted as the team's main representative in negotiating and collaborating with village officials, community leaders, and local agencies for permits and program implementation.</li>
+                        <li>Prepared logistical requirements for the seminar and competition activities.</li>
+                        <li>Coordinated with the event division regarding decoration and spatial arrangement.</li>
+                        <li>Collaborated with the public relations division in building preparation and processing event regulations.</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- 8. Freelancer Fotografer (Mar 2022) -->
+            <div class="experience-box reveal from-right reveal-delay-1">
+                <div class="experience-content">
+                    <h3>Freelance Photographer</h3>
+                    <h4>March 2022</h4>
+                    <p>Served as a photographer for the Atalian Global Services team at the Mandiri ITB Ultra Marathon event.</p>
                 </div>
             </div>
         </div>
@@ -182,7 +250,8 @@
     <section class="projects" id="projects">
         <h2 class="heading reveal fade-only">My <span>Projects</span></h2>
         <div class="projects-wrapper">
-            <button class="slider-btn prev-btn" id="prev-project" aria-label="Previous Project"><i class='bx bx-chevron-left'></i></button>
+            <button class="slider-btn prev-btn" id="prev-project" aria-label="Previous Project"><i
+                    class='bx bx-chevron-left'></i></button>
             <div class="portfolio-container" id="projects-slider">
                 <div class="portfolio-box reveal from-bottom reveal-delay-1">
                     <div class="portfolio-text-card">
@@ -205,7 +274,8 @@
                     </div>
                 </div>
             </div>
-            <button class="slider-btn next-btn" id="next-project" aria-label="Next Project"><i class='bx bx-chevron-right'></i></button>
+            <button class="slider-btn next-btn" id="next-project" aria-label="Next Project"><i
+                    class='bx bx-chevron-right'></i></button>
         </div>
     </section>
 
@@ -213,8 +283,8 @@
     <section class="contact" id="contact">
         <h2 class="heading reveal fade-only">Contact <span>Me</span></h2>
         <div class="contact-info">
-            <a href="tel:+6285697061544" class="contact-box reveal from-bottom reveal-delay-1">
-                <i class='bx bxs-phone'></i>
+            <a href="https://wa.me/6285697061544" target="_blank" class="contact-box reveal from-bottom reveal-delay-1">
+                <i class='bx bxl-whatsapp'></i>
                 <h3>Phone / WA</h3>
                 <p>+6285697061544</p>
             </a>
@@ -223,12 +293,14 @@
                 <h3>Email</h3>
                 <p>selayarif@gmail.com</p>
             </a>
-            <a href="https://www.instagram.com/arif.sly?igsh=dnpnMjRzdzY3dnM3&utm_source=qr" target="_blank" class="contact-box reveal from-bottom reveal-delay-3">
+            <a href="https://www.instagram.com/arif.sly?igsh=dnpnMjRzdzY3dnM3&utm_source=qr" target="_blank"
+                class="contact-box reveal from-bottom reveal-delay-3">
                 <i class='bx bxl-instagram'></i>
                 <h3>Instagram</h3>
                 <p>@arif.sly</p>
             </a>
-            <a href="https://www.linkedin.com/in/arief-selay/" target="_blank" class="contact-box reveal from-bottom reveal-delay-4">
+            <a href="https://www.linkedin.com/in/arief-selay/" target="_blank"
+                class="contact-box reveal from-bottom reveal-delay-4">
                 <i class='bx bxl-linkedin'></i>
                 <h3>LinkedIn</h3>
                 <p>Arief Selay</p>
@@ -255,4 +327,5 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
